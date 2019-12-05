@@ -1,0 +1,4 @@
+class AuthorizationError < StandardError
+
+
+end 

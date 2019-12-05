@@ -9,6 +9,10 @@
 
 # x
 
+User.destroy_all
+Location.destroy_all
+Comment.destroy_all
+
 meg = User.create(email: 'meg@oakmaine.com', first_name: 'Meg', last_name: 'Galvez', password: 'password')
 jason = User.create(email: 'texasstreetfly@gmail.com', first_name: 'Jason', last_name: 'Russell', password: 'password')
 
