@@ -1,6 +1,5 @@
 class LocationSerializer < ActiveModel::Serializer
-  attributes :id, :name, :content, :map_coords
-
+  attributes :id, :name, :content, :latitude, :longitude
   belongs_to :user 
   has_many :comments
 end

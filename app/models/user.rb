@@ -10,6 +10,6 @@ class User < ApplicationRecord
           jwt_revocation_strategy: JwtBlacklist
 
 
-  has_many :locations
-  has_many :comments
+  has_many :locations, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end

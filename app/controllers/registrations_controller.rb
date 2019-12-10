@@ -8,7 +8,7 @@ class RegistrationsController < Devise::RegistrationsController
         render_resource(e.record)
       rescue ActiveRecord::RecordNotUnique => e 
         error = OpenStruct.new(errors: {user: 'Already exists'})
-        validation_error(e.error)
+        validation_error(error)
       end 
     end
 
