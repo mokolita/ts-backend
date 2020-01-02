@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_05_205335) do
+ActiveRecord::Schema.define(version: 2020_01_02_193655) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
@@ -32,11 +32,10 @@ ActiveRecord::Schema.define(version: 2019_12_05_205335) do
   create_table "locations", force: :cascade do |t|
     t.string "name"
     t.text "content"
-    t.string "latitude"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "longitude"
+    t.string "address"
     t.index ["user_id"], name: "index_locations_on_user_id"
   end
 
