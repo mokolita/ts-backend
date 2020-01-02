@@ -1,8 +1,9 @@
 class LocationsController < ApplicationController
      before_action :authenticate_user!
+     skip_before_action :authenticate_user!, only: [:index]
 
     def index 
-        locations = current_user.locations
+        locations = Location.all
         render json: locations.to_json(include: [:comments] )
     end
 
