@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
 
     def index 
         locations = Location.all
-        render json: locations.to_json(include: [:comments] )
+        render json: locations.to_json(include: [:comments, :user] )
     end
 
     def show
